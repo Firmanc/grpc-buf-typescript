@@ -1,0 +1,17 @@
+# See https://docs.buf.build/generate-usage.
+
+version: v1beta1
+
+plugins:
+  - name: js
+    out: services/sdk
+    opt: import_style=commonjs,binary
+
+  - name: grpc
+    out: services/sdk
+    opt: grpc_js
+    path: grpc_tools_node_protoc_plugin
+
+  - name: ts
+    out: services/sdk
+    opt: grpc_js

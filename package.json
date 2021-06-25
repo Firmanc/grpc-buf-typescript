@@ -1,0 +1,20 @@
+{
+  "name": "grpc-node-buf-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "run-s check:* build:*",
+    "build:image": "buf build -o image.json",
+    "build:js": "buf generate --template buf.gen.yaml ./proto/",
+    "check:lint": "buf lint",
+    "check:breaking": "buf breaking --against image.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc-tools": "^1.9.1",
+    "grpc_tools_node_protoc_ts": "^5.0.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

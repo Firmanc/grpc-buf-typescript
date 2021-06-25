@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package language.v1;
+
+enum Code {
+  CODE_UNSPECIFIED = 0;
+  CODE_EN = 1;
+  CODE_CN = 2;
+}

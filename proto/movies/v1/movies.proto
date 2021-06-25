@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package films.v1;
+
+service MoviesService {
+  rpc GetMovies(GetMoviesRequest) returns (GetMoviesReponse) {}
+}
+
+message Language {
+  enum Code {
+    CODE_UNSPECIFIED = 0;
+    CODE_EN = 1;
+    CODE_CN = 2;
+  }
+}
+
+message GetMoviesRequest {
+  string name = 1;
+  Language.Code language_code = 2;
+}
+
+message GetMoviesReponse {
+  string greeting = 1;
+  Language.Code language_code = 2;
+}
