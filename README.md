@@ -1,9 +1,6 @@
 # Proto
 
-## Linting
-
-## Reserve fields
-
-  reserved "language_code";
-  reserved 2;
-  
+- Versioning
+- Linting
+- Create images and detecting breaking changes
+- Deleting Fields

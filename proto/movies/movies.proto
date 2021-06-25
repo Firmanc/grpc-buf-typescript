@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package movies.v1;
+package movie;
 
 service MoviesService {
-  rpc GetMovies(GetMoviesRequest) returns (GetMoviesResponse) {}
+  rpc GetMovies(GetMoviesRequest) returns (GetMoviesReponse) {}
 }
 
 message Language {
@@ -19,7 +19,7 @@ message GetMoviesRequest {
   Language.Code language_code = 2;
 }
 
-message GetMoviesResponse {
+message GetMoviesReponse {
   string greeting = 1;
   Language.Code language_code = 2;
 }
